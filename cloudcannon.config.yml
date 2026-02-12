@@ -1,0 +1,23 @@
+paths:
+  uploads: public/img
+  static: ''
+collections_config:
+  pages:
+    path: content
+    glob:
+      - '*.md'
+    icon: laptop_mac
+    url: /{permalink}/
+    disable_url: false
+    include_developer_files: true
+    _enabled_editors:
+      - visual
+    _inputs:
+      permalink:
+        comment: The relative url that this page should be located (e.g. /page-name/)
+        cascade: true
+    create:
+      path: '[relative_base_path]/{title|slugify}.md'
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false

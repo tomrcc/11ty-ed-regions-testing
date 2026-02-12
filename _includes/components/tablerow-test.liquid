@@ -1,0 +1,17 @@
+<div class="tablerow-component">
+  <h3>Tablerow Test</h3>
+  
+  <table>
+    <caption>3 columns</caption>
+    {% tablerow item in items cols: 3 %}
+      {{ item }}
+    {% endtablerow %}
+  </table>
+  
+  <table>
+    <caption>With tablerowloop properties</caption>
+    {% tablerow item in items cols: 4 %}
+      {{ item }} ({{ tablerowloop.index }})
+    {% endtablerow %}
+  </table>
+</div>

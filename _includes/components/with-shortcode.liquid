@@ -1,0 +1,20 @@
+<div class="with-shortcode-component">
+  <h3>Custom Paired Shortcode Test</h3>
+  
+  <div class="tests">
+    <p><strong>Text:</strong> <span data-editable="text" data-prop="text">{{ text }}</span></p>
+    
+    <p><strong>Tint (red):</strong> {% tint "red" %}{{ text }}{% endtint %}</p>
+    <p><strong>Tint (blue):</strong> {% tint "blue" %}{{ text }}{% endtint %}</p>
+    <p><strong>Tint (green):</strong> {% tint "green" %}This is green text{% endtint %}</p>
+    
+    <p><strong>Nested tints:</strong> 
+      {% tint "red" %}
+        Outer red 
+        {% tint "blue" %}
+          Inner blue
+        {% endtint %}
+      {% endtint %}
+    </p>
+  </div>
+</div>

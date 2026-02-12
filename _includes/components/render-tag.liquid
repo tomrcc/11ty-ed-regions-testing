@@ -1,0 +1,13 @@
+<div class="render-tag-component">
+  <h3>Render Tag Test</h3>
+  
+  <div class="tests">
+    <h4>Render (isolated scope)</h4>
+    {% assign outer_var = "Outer scope variable" %}
+    <p>Before render: {{ outer_var }}</p>
+    
+    {% render "components/simple.liquid", title: "Rendered Title", description: "Rendered with isolated scope" %}
+    
+    <p>After render: {{ outer_var }} (still accessible)</p>
+  </div>
+</div>

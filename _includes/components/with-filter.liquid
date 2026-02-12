@@ -1,0 +1,10 @@
+<div class="with-filter-component">
+  <h3>Custom Filter Test</h3>
+  
+  <div class="tests">
+    <p><strong>Text:</strong> <span data-editable="text" data-prop="text">{{ text }}</span></p>
+    <p><strong>Custom filter:</strong> {{ text | customFilter }}</p>
+    <p><strong>Reverse string filter:</strong> {{ text | reverseString }}</p>
+    <p><strong>Chained custom filters:</strong> {{ text | customFilter | reverseString }}</p>
+  </div>
+</div>

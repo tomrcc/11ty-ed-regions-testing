@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{{ title or "Test Page" }}</title>
+		<style eleventy:ignore>
+			body {
+				font-family: system-ui, -apple-system, sans-serif;
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 2rem;
+				line-height: 1.6;
+			}
+			h1 {
+				color: #2563eb;
+				border-bottom: 2px solid #e5e7eb;
+				padding-bottom: 0.5rem;
+			}
+			.test-container {
+				margin: 2rem 0;
+				padding: 1.5rem;
+				border: 1px solid #e5e7eb;
+				border-radius: 0.5rem;
+				background: #f9fafb;
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			{{ content | safe }}
+		</main>
+		
+		{# Load live-editing.js for CloudCannon editor #}
+		<script type="module" eleventy:ignore>
+			import("/live-editing.js").catch(e => console.error("Failed to load live-editing.js:", e));
+		</script>
+	</body>
+</html>

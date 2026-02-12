@@ -1,0 +1,21 @@
+<div class="builtin-filters-component">
+  <h3>Built-in Filters Test</h3>
+  
+  <div class="filter-tests">
+    <p><strong>Original:</strong> <span data-editable="text" data-prop="text">{{ text }}</span></p>
+    <p><strong>Capitalize:</strong> {{ text | capitalize }}</p>
+    <p><strong>Upcase:</strong> {{ text | upcase }}</p>
+    <p><strong>Downcase:</strong> {{ text | downcase }}</p>
+    
+    <p><strong>Number:</strong> <span data-editable="text" data-prop="number">{{ number }}</span></p>
+    <p><strong>Abs:</strong> {{ number | abs }}</p>
+    <p><strong>Plus 5:</strong> {{ number | plus: 5 }}</p>
+    <p><strong>Minus 3:</strong> {{ number | minus: 3 }}</p>
+    <p><strong>Times 2:</strong> {{ number | times: 2 }}</p>
+    <p><strong>Divided by 2:</strong> {{ number | divided_by: 2 }}</p>
+    
+    <p><strong>URL:</strong> <span data-editable="text" data-prop="url">{{ url }}</span></p>
+    <p><strong>Escape:</strong> {{ url | escape }}</p>
+    <p><strong>URL Encode:</strong> {{ url | url_encode }}</p>
+  </div>
+</div>

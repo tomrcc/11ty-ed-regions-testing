@@ -1,0 +1,21 @@
+<div class="array-filters-component">
+  <h3>Array Filters Test</h3>
+  
+  <div class="filter-tests">
+    <p><strong>Items:</strong></p>
+    <ul data-editable="array" data-prop="items">
+      {% for item in items %}
+        <li data-editable="array-item">{{ item }}</li>
+      {% endfor %}
+    </ul>
+    
+    <p><strong>First:</strong> {{ items | first }}</p>
+    <p><strong>Last:</strong> {{ items | last }}</p>
+    <p><strong>Size:</strong> {{ items | size }}</p>
+    <p><strong>Join with comma:</strong> {{ items | join: ", " }}</p>
+    <p><strong>Reverse:</strong> {{ items | reverse | join: ", " }}</p>
+    <p><strong>Sort:</strong> {{ items | sort | join: ", " }}</p>
+    <p><strong>Uniq:</strong> {{ items | uniq | join: ", " }}</p>
+    <p><strong>Map (get 'name'):</strong> {{ objects | map: "name" | join: ", " }}</p>
+  </div>
+</div>

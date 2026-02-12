@@ -1,0 +1,11 @@
+<div class="date-filter-component">
+  <h3>Date Filter Test</h3>
+  
+  <div class="filter-tests">
+    <p><strong>Date:</strong> <span data-editable="text" data-prop="date">{{ date }}</span></p>
+    <p><strong>Full date:</strong> {{ date | date: "%B %d, %Y" }}</p>
+    <p><strong>Short date:</strong> {{ date | date: "%Y-%m-%d" }}</p>
+    <p><strong>Time:</strong> {{ date | date: "%H:%M:%S" }}</p>
+    <p><strong>Custom:</strong> {{ date | date: "%A, %B %d, %Y at %I:%M %p" }}</p>
+  </div>
+</div>

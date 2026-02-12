@@ -11,7 +11,8 @@
 		"start-ghpages": "npx @11ty/eleventy --pathprefix=/eleventy-base-blog/ --serve --quiet",
 		"debug": "cross-env DEBUG=Eleventy* npx @11ty/eleventy",
 		"debugstart": "cross-env DEBUG=Eleventy* npx @11ty/eleventy --serve --quiet",
-		"benchmark": "cross-env DEBUG=Eleventy:Benchmark* npx @11ty/eleventy"
+		"benchmark": "cross-env DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
+		"test": "npm run build"
 	},
 	"repository": {
 		"type": "git",
@@ -47,6 +48,7 @@
 		"zod-validation-error": "^3.5.2"
 	},
 	"dependencies": {
+		"@cloudcannon/editable-regions": "file:../editable-regions",
 		"@zachleat/heading-anchors": "^1.0.5"
 	}
 }

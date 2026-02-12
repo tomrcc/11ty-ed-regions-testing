@@ -1,0 +1,22 @@
+<div class="additional-filters-component">
+  <h3>Additional Filters Test</h3>
+  
+  <div class="filter-tests">
+    <p><strong>Text with spaces:</strong> <span data-editable="text" data-prop="text">{{ text }}</span></p>
+    <p><strong>Strip:</strong> "{{ text | strip }}"</p>
+    <p><strong>Lstrip:</strong> "{{ text | lstrip }}"</p>
+    <p><strong>Rstrip:</strong> "{{ text | rstrip }}"</p>
+    
+    <p><strong>HTML:</strong> <span data-editable="text" data-prop="html">{{ html }}</span></p>
+    <p><strong>Strip HTML:</strong> {{ html | strip_html }}</p>
+    
+    <p><strong>Long text:</strong> <span data-editable="text" data-prop="long_text">{{ long_text }}</span></p>
+    <p><strong>Truncate:</strong> {{ long_text | truncate: 50 }}</p>
+    <p><strong>Truncate words:</strong> {{ long_text | truncatewords: 5 }}</p>
+    
+    <p><strong>Slice:</strong> {{ text | slice: 0, 10 }}</p>
+    <p><strong>Prepend:</strong> {{ text | prepend: ">>> " }}</p>
+    <p><strong>Append:</strong> {{ text | append: " <<<" }}</p>
+    <p><strong>Replace:</strong> {{ text | replace: "test", "example" }}</p>
+  </div>
+</div>

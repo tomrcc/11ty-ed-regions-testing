@@ -1,0 +1,11 @@
+<div class="cycle-component">
+  <h3>Cycle Test</h3>
+  
+  <ul data-editable="array" data-prop="items">
+    {% for item in items %}
+      <li class="{% cycle 'odd', 'even' %}" data-editable="array-item">
+        {{ item }} - Class: {% cycle 'red', 'blue', 'green' %}
+      </li>
+    {% endfor %}
+  </ul>
+</div>

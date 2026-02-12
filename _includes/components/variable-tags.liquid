@@ -1,0 +1,25 @@
+<div class="variable-tags-component">
+  <h3>Variable Tags Test</h3>
+  
+  <div class="tests">
+    <h4>Assign</h4>
+    {% assign my_var = "Hello World" %}
+    <p>Assigned variable: {{ my_var }}</p>
+    
+    <h4>Capture</h4>
+    {% capture my_capture %}
+      This is captured content with {{ title }}
+    {% endcapture %}
+    <p>Captured content: {{ my_capture }}</p>
+    
+    <h4>Increment/Decrement</h4>
+    {% increment my_counter %}
+    {% increment my_counter %}
+    {% increment my_counter %}
+    <p>After 3 increments: {{ my_counter }}</p>
+    
+    {% decrement my_counter2 %}
+    {% decrement my_counter2 %}
+    <p>After 2 decrements: {{ my_counter2 }}</p>
+  </div>
+</div>

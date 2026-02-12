@@ -1,0 +1,20 @@
+<div class="liquid-tag-component">
+  <h3>Liquid Tag Test</h3>
+  
+  <div class="tests">
+    <h4>Multi-statement liquid tag</h4>
+    {% liquid
+      assign product_title = title | upcase
+      assign product_price = price | times: 1.1 | round: 2
+      
+      if product_price > 100
+        assign price_class = "expensive"
+      else
+        assign price_class = "affordable"
+      endif
+    %}
+    
+    <p>Product: {{ product_title }}</p>
+    <p>Price: ${{ product_price }} ({{ price_class }})</p>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="with-tag-component">
+  <h3>Custom Tag Test</h3>
+  
+  <div class="tests">
+    <p><strong>Text:</strong> <span data-editable="text" data-prop="text">{{ text }}</span></p>
+    <p><strong>Shout tag:</strong> {% shout text %}</p>
+    <p><strong>Shout literal:</strong> {% shout "hello world" %}</p>
+    
+    <p><strong>Shout in loop:</strong></p>
+    <ul data-editable="array" data-prop="items">
+      {% for item in items %}
+        <li data-editable="array-item">{% shout item %}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

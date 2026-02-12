@@ -1,0 +1,8 @@
+<div class="parent-component">
+  <h2 data-editable="text" data-prop="parent_title">{{ parent_title }}</h2>
+  <div class="nested-child">
+    <editable-component data-component="nested/child" data-prop="child">
+      {% include "components/nested/child.liquid", child %}
+    </editable-component>
+  </div>
+</div>

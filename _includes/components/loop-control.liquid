@@ -1,0 +1,36 @@
+<div class="loop-control-component">
+  <h3>Loop Control Test</h3>
+  
+  <h4>Break (stops at 3)</h4>
+  <ul>
+    {% for item in items %}
+      {% if forloop.index == 3 %}
+        {% break %}
+      {% endif %}
+      <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+  
+  <h4>Continue (skips even indices)</h4>
+  <ul>
+    {% for item in items %}
+      {% assign remainder = forloop.index0 | modulo: 2 %}
+      {% if remainder == 0 %}
+        {% continue %}
+      {% endif %}
+      <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+  
+  <h4>Nested loops with parentloop</h4>
+  <div>
+    {% for outer in nested_items %}
+      <div class="outer">
+        <strong>Outer {{ forloop.index }}:</strong>
+        {% for inner in outer.children %}
+          <span>{{ inner }} (parent: {{ forloop.parentloop.index }})</span>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
+</div>

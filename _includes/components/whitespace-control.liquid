@@ -1,0 +1,22 @@
+<div class="whitespace-component">
+  <h3>Whitespace Control Test</h3>
+  
+  <div class="tests">
+    <h4>Without whitespace control</h4>
+    <pre>
+{% for item in items %}
+  {{ item }}
+{% endfor %}
+    </pre>
+    
+    <h4>With whitespace control (-)</h4>
+    <pre>
+{%- for item in items -%}
+  {{ item }}
+{%- endfor -%}
+    </pre>
+    
+    <p>Text {{- " no space before " -}} text</p>
+    <p>Text {{ " space before and after " }} text</p>
+  </div>
+</div>

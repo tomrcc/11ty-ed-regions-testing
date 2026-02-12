@@ -1,0 +1,32 @@
+<div class="control-flow-component">
+  <h3>Control Flow Test</h3>
+  
+  <div class="conditionals">
+    <p><strong>Show content:</strong> <span data-editable="text" data-prop="show_content">{{ show_content }}</span></p>
+    
+    {% if show_content %}
+      <p class="visible">Content is visible (if)</p>
+    {% else %}
+      <p class="hidden">Content is hidden (else)</p>
+    {% endif %}
+    
+    {% unless show_content %}
+      <p class="hidden">Content is hidden (unless)</p>
+    {% else %}
+      <p class="visible">Content is visible (unless/else)</p>
+    {% endunless %}
+    
+    <p><strong>Type:</strong> <span data-editable="text" data-prop="type">{{ type }}</span></p>
+    
+    {% case type %}
+      {% when "primary" %}
+        <p class="primary">Primary type</p>
+      {% when "secondary" %}
+        <p class="secondary">Secondary type</p>
+      {% when "tertiary" %}
+        <p class="tertiary">Tertiary type</p>
+      {% else %}
+        <p class="default">Default type</p>
+    {% endcase %}
+  </div>
+</div>

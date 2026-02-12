@@ -1,0 +1,19 @@
+<div class="raw-comment-component">
+  <h3>Raw and Comment Test</h3>
+  
+  <div class="tests">
+    <h4>Raw (prevents Liquid processing)</h4>
+    <pre>{% raw %}{{ this will not be processed }} {% if false %}neither will this{% endif %}{% endraw %}</pre>
+    
+    <h4>Comment (hidden in output)</h4>
+    <p>Before comment</p>
+    {% comment %}
+      This is a comment and should not appear in the output.
+      It can contain {{ variables }} and {% tags %}.
+    {% endcomment %}
+    <p>After comment</p>
+    
+    <h4>Empty data-prop test</h4>
+    <div data-editable="text" data-prop="">This has an empty data-prop</div>
+  </div>
+</div>

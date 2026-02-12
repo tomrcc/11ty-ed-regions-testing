@@ -1,0 +1,37 @@
+<div class="forloop-component">
+  <h3>For Loop Test</h3>
+  
+  <ul data-editable="array" data-prop="items">
+    {% for item in items %}
+      <li data-editable="array-item">
+        {{ item }} 
+        (index: {{ forloop.index }}, 
+        index0: {{ forloop.index0 }}, 
+        first: {{ forloop.first }}, 
+        last: {{ forloop.last }}, 
+        length: {{ forloop.length }})
+      </li>
+    {% endfor %}
+  </ul>
+  
+  <h4>Limited Loop (limit: 3)</h4>
+  <ul>
+    {% for item in items limit: 3 %}
+      <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+  
+  <h4>Offset Loop (offset: 2)</h4>
+  <ul>
+    {% for item in items offset: 2 %}
+      <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+  
+  <h4>Reversed Loop</h4>
+  <ul>
+    {% for item in items reversed %}
+      <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+</div>

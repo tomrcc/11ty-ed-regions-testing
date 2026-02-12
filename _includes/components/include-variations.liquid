@@ -1,0 +1,15 @@
+<div class="include-variations-component">
+  <h3>Include Variations Test</h3>
+  
+  <div class="tests">
+    <h4>Standard include</h4>
+    {% include "components/simple.liquid", title: title, description: description %}
+    
+    <h4>Dynamic path include</h4>
+    {% assign component_path = "components/simple.liquid" %}
+    {% include component_path, title: title, description: description %}
+    
+    <h4>Nested include</h4>
+    {% include "components/nested/parent.liquid", parent_title: parent_title, child: child_data %}
+  </div>
+</div>
